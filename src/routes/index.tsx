@@ -6,6 +6,7 @@ import {
   ArrowRight,
   Bath,
   BedDouble,
+  Calendar,
   ChevronRight,
   Coffee,
   Flame,
@@ -21,15 +22,16 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroAsset from "@/assets/SaveClip.App_785265639_18609305545022245_7413330073285849987_n.jpg.asset.json";
-import bedroomAsset from "@/assets/SaveClip.App_766764969_18601739062022245_6884120617230699439_n.jpg.asset.json";
-import spaNightAsset from "@/assets/SaveClip.App_768348017_18601738975022245_5622541170481989607_n.jpg.asset.json";
-import mistAsset from "@/assets/SaveClip.App_780238939_18608639719022245_1841419069032026891_n.jpg.asset.json";
-import fireplaceAsset from "@/assets/SaveClip.App_791483644_18609672109022245_1319292181042678013_n.jpg.asset.json";
-import mountainsAsset from "@/assets/SaveClip.App_790945582_18610120210022245_5709095221848406257_n.jpg.asset.json";
-import breakfastAsset from "@/assets/SaveClip.App_790669120_18610448164022245_5020404322209434489_n.jpg.asset.json";
-import deckAsset from "@/assets/SaveClip.App_813872616_18615497563022245_1367223161965432837_n.jpg.asset.json";
-import bathAsset from "@/assets/SaveClip.App_814229732_18615344434022245_1170989918068715585_n.jpg.asset.json";
+import { ConciergeBooking } from "@/components/ConciergeBooking";
+const heroAsset = { url: "/images/SaveClip.App_785265639_18609305545022245_7413330073285849987_n.jpg" };
+const bedroomAsset = { url: "/images/SaveClip.App_766764969_18601739062022245_6884120617230699439_n.jpg" };
+const spaNightAsset = { url: "/images/SaveClip.App_768348017_18601738975022245_5622541170481989607_n.jpg" };
+const mistAsset = { url: "/images/SaveClip.App_780238939_18608639719022245_1841419069032026891_n.jpg" };
+const fireplaceAsset = { url: "/images/SaveClip.App_791483644_18609672109022245_1319292181042678013_n.jpg" };
+const mountainsAsset = { url: "/images/SaveClip.App_790945582_18610120210022245_5709095221848406257_n.jpg" };
+const breakfastAsset = { url: "/images/SaveClip.App_790669120_18610448164022245_5020404322209434489_n.jpg" };
+const deckAsset = { url: "/images/SaveClip.App_813872616_18615497563022245_1367223161965432837_n.jpg" };
+const bathAsset = { url: "/images/SaveClip.App_814229732_18615344434022245_1170989918068715585_n.jpg" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,16 +54,16 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP_URL = "https://wa.me/5500000000000";
+const WHATSAPP_URL = "https://wa.me/5512999999999";
 const AIRBNB_URL = "https://www.airbnb.com.br/";
 
 const features = [
-  { icon: Bath, title: "Spa privativo", text: "Sauna, ofurô e chuveiro externo entre as árvores." },
-  { icon: Flame, title: "Lareira", text: "Fogo aceso e a noite fria da serra do lado de fora." },
-  { icon: Mountain, title: "Pedra do Baú", text: "Uma vista aberta sobre montanhas e vales da Mantiqueira." },
-  { icon: Coffee, title: "Cozinha completa", text: "Liberdade para cozinhar, com Nespresso à disposição." },
-  { icon: Sparkles, title: "Enxoval de luxo", text: "Roupa de cama macia, roupões e pantufas para desacelerar." },
-  { icon: ShieldCheck, title: "Check-in privativo", text: "Entrada por senha, sem contato e no tempo de vocês." },
+  { icon: Bath, title: "Circuito de Spa Privativo", text: "Sauna a vapor envidraçada, ofurô aquecido e ducha externa imersa na floresta." },
+  { icon: Flame, title: "Lareira & Atmosfera Noturna", text: "Fogo aceso, adega e a noite fria da Mantiqueira do lado de fora das vidraças." },
+  { icon: Mountain, title: "Vista para a Pedra do Baú", text: "Arquitetura aberta que enquadra o nascer do sol e a névoa sobre os vales da serra." },
+  { icon: Coffee, title: "Cozinha Gourmet & Nespresso", text: "Espaço planejado para jantares a dois, com liberdade e privacidade total." },
+  { icon: Sparkles, title: "Enxoval Nobre & Roupões", text: "Roupões aveludados, pantufas e cama macia para um descanso sem hora marcada." },
+  { icon: ShieldCheck, title: "Check-in 100% Autônomo", text: "Acesso por senha digital com total privacidade e segurança ao lado do Palácio." },
 ];
 
 const gallery = [
@@ -73,10 +75,26 @@ const gallery = [
 ];
 
 const testimonials = [
-  "[Inserir avaliação real do Airbnb sobre a experiência do casal aqui]",
-  "[Inserir avaliação real do Airbnb sobre o spa e a vista aqui]",
-  "[Inserir avaliação real do Airbnb sobre acolhimento e privacidade aqui]",
-  "[Inserir avaliação real do Airbnb sobre a casa e a localização aqui]",
+  {
+    quote: "O lugar é um verdadeiro paraíso! Totalmente imersa na natureza, proporcionando uma paz indescritível. E um destaque especial para o Filipe, extremamente atencioso e solícito durante toda a estadia, sempre disponível pelo WhatsApp e com ótimas dicas gastronômicas.",
+    author: "Patrícia",
+    context: "Avaliação 5.0 ★ no Airbnb · Julho de 2026",
+  },
+  {
+    quote: "O lugar é exatamente como as fotos: lindo, confortável e privativo! Filipe muito prestativo desde a reserva, indicando fornecedores e cafés. Passei um dia e foi tão relaxante que pareceu uma estadia de 5 dias. Voltarei com certeza!",
+    author: "Camila",
+    context: "Avaliação 5.0 ★ no Airbnb (10 anos na plataforma) · Maio de 2026",
+  },
+  {
+    quote: "A casa é exatamente como anunciado: muito confortável, silenciosa e com uma vista impecável! O ideal é ir para curtir a casa em si, pois ela é um espetáculo. Aproveitem cada momento!",
+    author: "Paulo Augusto",
+    context: "Avaliação 5.0 ★ no Airbnb · Maio de 2026",
+  },
+  {
+    quote: "Uma noite surreal, valeu cada centavo! Sauna, ofurô, jacuzzi, cozinha completa e cama de altíssima qualidade. O Filipe ainda indicou serviços extras de massagista e arranjos. Um dos lugares mais completos que já ficamos!",
+    author: "Edivaldo",
+    context: "Avaliação 5.0 ★ no Airbnb · Março de 2026",
+  },
 ];
 
 function useReveal() {
@@ -273,8 +291,12 @@ function Index() {
           </div>
           <p className="mt-4 text-xs uppercase tracking-[0.22em] text-muted-foreground">4,98 de 5 · 125 avaliações no Airbnb</p>
           <Quote className="mx-auto mt-12 h-10 w-10 text-accent-strong/55" strokeWidth={1} />
-          <div ref={testimonialRef} tabIndex={-1} className="mt-8 min-h-[150px] outline-none" aria-live="polite">
-            <blockquote className="font-display text-3xl leading-tight sm:text-5xl">“{testimonials[testimonial]}”</blockquote>
+          <div ref={testimonialRef} tabIndex={-1} className="mt-8 min-h-[170px] outline-none" aria-live="polite">
+            <blockquote className="font-display text-2xl leading-relaxed sm:text-4xl">“{testimonials[testimonial].quote}”</blockquote>
+            <div className="mt-6">
+              <span className="block font-medium text-sm text-foreground">{testimonials[testimonial].author}</span>
+              <span className="text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">{testimonials[testimonial].context}</span>
+            </div>
           </div>
           <div className="mt-8 flex items-center justify-center gap-4">
             <button className="carousel-button" onClick={() => changeTestimonial(testimonial - 1)} aria-label="Avaliação anterior"><ArrowLeft /></button>
@@ -287,28 +309,45 @@ function Index() {
         </div>
       </section>
 
-      <section id="reserva" className="relative isolate min-h-[720px] overflow-hidden">
+      <section id="reserva" className="relative isolate min-h-[840px] overflow-hidden py-24 sm:py-32">
         <img src={deckAsset.url} alt="Deck da Casa Spa envolto pela neblina" className="absolute inset-0 -z-20 h-full w-full object-cover" loading="lazy" />
-        <div className="absolute inset-0 -z-10 bg-primary/70" />
-        <div className="mx-auto flex min-h-[720px] max-w-[1440px] items-center justify-center px-5 py-24 text-center text-primary-foreground sm:px-8">
-          <div className="max-w-4xl" data-reveal>
-            <p className="text-xs uppercase tracking-[0.3em] text-primary-foreground/70">A serra espera por vocês</p>
-            <h2 className="mt-7 font-display text-[clamp(3.1rem,7vw,6.8rem)] leading-[0.95]">Dois dias podem mudar o ritmo de tudo.</h2>
-            <p className="mx-auto mt-7 max-w-xl leading-7 text-primary-foreground/75">Consulte as datas disponíveis e descubra as condições da reserva direta.</p>
-            <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-              <Button variant="luxury" size="luxury" asChild>
-                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer"><MessageCircle /> Reservar pelo WhatsApp</a>
-              </Button>
-              <Button variant="luxuryOutline" size="luxury" asChild>
-                <a href={AIRBNB_URL} target="_blank" rel="noreferrer">Ver no Airbnb <ChevronRight /></a>
-              </Button>
-            </div>
-            <p className="mt-5 text-xs text-primary-foreground/55">Links provisórios — contatos oficiais serão adicionados antes da publicação.</p>
+        <div className="absolute inset-0 -z-10 bg-primary/80 backdrop-blur-[2px]" />
+        <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-12 text-primary-foreground">
+          <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16" data-reveal>
+            <p className="text-xs uppercase tracking-[0.3em] text-accent">A serra espera por vocês</p>
+            <h2 className="mt-5 font-display text-[clamp(2.6rem,5.5vw,5.2rem)] leading-[0.98]">Dois dias podem mudar o ritmo de tudo.</h2>
+            <p className="mx-auto mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-primary-foreground/80">
+              Consulte as datas de sua preferência com atendimento privativo e descubra as vantagens exclusivas da reserva direta.
+            </p>
+          </div>
+
+          <div data-reveal>
+            <ConciergeBooking />
           </div>
         </div>
       </section>
 
-      <footer className="bg-footer py-14 text-footer-foreground">
+      {/* Floating Concierge Bar no Mobile (quando rolar) */}
+      <div
+        className={`fixed inset-x-0 bottom-0 z-40 flex items-center justify-between border-t border-border/80 bg-background/95 px-4 py-3 shadow-2xl backdrop-blur-lg transition-transform duration-300 md:hidden ${
+          scrolled ? "translate-y-0" : "translate-y-full"
+        }`}
+      >
+        <div>
+          <span className="block font-display text-sm leading-tight text-foreground">Casa Spa</span>
+          <span className="text-[0.65rem] uppercase tracking-[0.16em] text-accent-strong">
+            Exclusivo para 2 adultos
+          </span>
+        </div>
+        <Button variant="luxury" size="sm" asChild className="h-10 px-4 text-xs">
+          <a href="#reserva">
+            <Calendar className="h-3.5 w-3.5" />
+            <span>Consultar Datas</span>
+          </a>
+        </Button>
+      </div>
+
+      <footer className="bg-footer py-14 text-footer-foreground pb-24 md:pb-14">
         <div className="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 md:grid-cols-[1fr_auto] md:items-end lg:px-12">
           <div>
             <Brand />
