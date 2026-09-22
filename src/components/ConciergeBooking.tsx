@@ -352,6 +352,8 @@ export function ConciergeBooking({ className, variant = "full" }: ConciergeBooki
           </Button>
         </div>
       </div>
+      </div>
     </div>
+
   );
 }
