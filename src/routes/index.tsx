@@ -112,7 +112,7 @@ function useReveal() {
 function Brand() {
   return (
     <a href="#inicio" className="group leading-none" aria-label="Casa Spa — início">
-      <span className="block font-display text-xl uppercase tracking-[0.18em] sm:text-2xl">Casa Spa</span>
+      <span className="block text-xl uppercase tracking-[0.18em] sm:text-2xl">Casa Spa</span>
       <span className="mt-1 block text-[0.52rem] uppercase tracking-[0.38em] opacity-75">Campos do Jordão</span>
     </a>
   );
@@ -167,7 +167,7 @@ function Index() {
             <em className="mt-2 block font-normal text-accent">Só para vocês dois.</em>
           </h1>
           <div className="mt-8 flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-10">
-            <p className="max-w-sm text-sm leading-relaxed text-primary-foreground/80 sm:text-base">
+            <p className="max-w-sm font-reading text-sm leading-relaxed text-primary-foreground/80 sm:text-base">
               Serra da Mantiqueira, Campos do Jordão. Vidro, madeira, fogo e silêncio dentro de uma reserva de Mata Atlântica.
             </p>
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
@@ -196,14 +196,14 @@ function Index() {
           <div className="relative" data-reveal>
             <img src={bedroomAsset.url} alt="Cama voltada para a varanda e as montanhas" className="h-[64svh] max-h-[780px] min-h-[520px] w-full object-cover" />
             <div className="absolute -bottom-8 right-0 bg-primary px-7 py-6 text-primary-foreground sm:right-8 sm:px-10">
-              <span className="block font-display text-4xl">138 m²</span>
+              <span className="block text-4xl">138 m²</span>
               <span className="text-[0.65rem] uppercase tracking-[0.24em] opacity-75">de absoluta privacidade</span>
             </div>
           </div>
           <div className="pt-8 lg:pt-0" data-reveal>
             <Eyebrow>Uma casa. Um casal. Nenhuma pressa.</Eyebrow>
             <h2 className="section-title">Não é hotel.<br />É um lugar inteiro para vocês.</h2>
-            <div className="mt-8 max-w-xl space-y-5 text-base leading-8 text-muted-foreground">
+            <div className="mt-8 max-w-xl space-y-5 font-reading text-base leading-8 text-muted-foreground">
               <p>Uma única casa, aberta para a floresta por vidraças do chão ao teto. Não há corredores, recepção ou outros hóspedes. Só o som da mata e o tempo de vocês.</p>
               <p>Pela manhã, a névoa atravessa o vale. À noite, a lareira crepita enquanto o vapor da sauna encontra o ar frio da serra.</p>
               <p>A experiência é self-service premium: cozinha completa, Nespresso e liberdade para criar o próprio ritmo — sem pensão ou café da manhã incluso.</p>
@@ -227,10 +227,10 @@ function Index() {
               <article key={title} className="feature-cell">
                 <div className="flex items-start justify-between gap-5">
                   <Icon className="h-7 w-7 text-accent-strong" strokeWidth={1.4} />
-                  <span className="font-display text-sm text-muted-foreground/60">0{index + 1}</span>
+                  <span className="text-sm text-muted-foreground/60">0{index + 1}</span>
                 </div>
                 <h3 className="mt-12 font-display text-3xl">{title}</h3>
-                <p className="mt-3 max-w-xs text-sm leading-6 text-muted-foreground">{text}</p>
+                <p className="mt-3 max-w-xs font-reading text-sm leading-6 text-muted-foreground">{text}</p>
               </article>
             ))}
           </div>
@@ -244,7 +244,7 @@ function Index() {
               <Eyebrow>A casa em cada estação</Eyebrow>
               <h2 className="section-title">Entre a névoa e o fogo.</h2>
             </div>
-            <p className="hidden max-w-xs text-right text-sm leading-6 text-muted-foreground md:block">A paisagem muda. A sensação de estar longe de tudo permanece.</p>
+            <p className="hidden max-w-xs text-right font-reading text-sm leading-6 text-muted-foreground md:block">A paisagem muda. A sensação de estar longe de tudo permanece.</p>
           </div>
           <div className="editorial-gallery" data-reveal>
             {gallery.map((image) => (
@@ -270,7 +270,7 @@ function Index() {
           <div className="px-5 py-20 sm:px-12 lg:px-16 lg:py-28" data-reveal>
             <Eyebrow light>Isolada, sem estar distante</Eyebrow>
             <h2 className="section-title text-primary-foreground">Perto da cidade.<br />Dentro da mata.</h2>
-            <p className="mt-7 max-w-lg leading-7 text-primary-foreground/70">Próxima ao Palácio do Governo, a casa preserva silêncio e segurança sem abrir mão do acesso ao melhor de Campos do Jordão.</p>
+            <p className="mt-7 max-w-lg font-reading leading-7 text-primary-foreground/70">Próxima ao Palácio do Governo, a casa preserva silêncio e segurança sem abrir mão do acesso ao melhor de Campos do Jordão.</p>
             <div className="mt-12 divide-y divide-primary-foreground/20 border-y border-primary-foreground/20">
               <Distance time="2h" label="Aeroporto de Guarulhos" />
               <Distance time="10 min" label="Centro de Campos do Jordão" />
@@ -292,7 +292,7 @@ function Index() {
           <p className="mt-4 text-xs uppercase tracking-[0.22em] text-muted-foreground">4,98 de 5 · 125 avaliações no Airbnb</p>
           <Quote className="mx-auto mt-12 h-10 w-10 text-accent-strong/55" strokeWidth={1} />
           <div ref={testimonialRef} tabIndex={-1} className="mt-8 min-h-[170px] outline-none" aria-live="polite">
-            <blockquote className="font-display text-2xl leading-relaxed sm:text-4xl">“{testimonials[testimonial].quote}”</blockquote>
+            <blockquote className="font-reading text-2xl leading-relaxed sm:text-4xl">“{testimonials[testimonial].quote}”</blockquote>
             <div className="mt-6">
               <span className="block font-medium text-sm text-foreground">{testimonials[testimonial].author}</span>
               <span className="text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">{testimonials[testimonial].context}</span>
@@ -316,7 +316,7 @@ function Index() {
           <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16" data-reveal>
             <p className="text-xs uppercase tracking-[0.3em] text-accent">A serra espera por vocês</p>
             <h2 className="mt-5 font-display text-[clamp(2.6rem,5.5vw,5.2rem)] leading-[0.98]">Dois dias podem mudar o ritmo de tudo.</h2>
-            <p className="mx-auto mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-primary-foreground/80">
+            <p className="mx-auto mt-5 max-w-xl font-reading text-sm leading-relaxed text-primary-foreground/80 sm:text-base">
               Consulte as datas de sua preferência com atendimento privativo e descubra as vantagens exclusivas da reserva direta.
             </p>
           </div>
@@ -334,7 +334,7 @@ function Index() {
         }`}
       >
         <div>
-          <span className="block font-display text-sm leading-tight text-foreground">Casa Spa</span>
+          <span className="block text-sm leading-tight text-foreground">Casa Spa</span>
           <span className="text-[0.65rem] uppercase tracking-[0.16em] text-accent-strong">
             Exclusivo para 2 adultos
           </span>
@@ -351,7 +351,7 @@ function Index() {
         <div className="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 md:grid-cols-[1fr_auto] md:items-end lg:px-12">
           <div>
             <Brand />
-            <p className="mt-5 max-w-md text-sm leading-6 text-footer-foreground/60">Uma casa de luxo para dois, dentro de uma reserva de Mata Atlântica em Campos do Jordão.</p>
+            <p className="mt-5 max-w-md font-reading text-sm leading-6 text-footer-foreground/60">Uma casa de luxo para dois, dentro de uma reserva de Mata Atlântica em Campos do Jordão.</p>
           </div>
           <div className="grid gap-4 text-sm md:text-right">
             <a className="footer-link" href="https://instagram.com/casaspacamposdojordao" target="_blank" rel="noreferrer">@casaspacamposdojordao</a>
@@ -378,11 +378,11 @@ function Proof({ icon: Icon, main, sub }: { icon: typeof Star; main: string; sub
   return (
     <div className="flex min-h-28 items-center gap-4 py-6 sm:px-6 lg:px-8">
       <Icon className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.5} />
-      <div><strong className="block font-display text-lg font-normal">{main}</strong><span className="text-[0.68rem] uppercase tracking-[0.12em] text-primary-foreground/55">{sub}</span></div>
+      <div><strong className="block text-lg font-normal">{main}</strong><span className="text-[0.68rem] uppercase tracking-[0.12em] text-primary-foreground/55">{sub}</span></div>
     </div>
   );
 }
 
 function Distance({ time, label }: { time: string; label: string }) {
-  return <div className="grid grid-cols-[5rem_minmax(0,1fr)] items-center gap-4 py-5"><strong className="font-display text-2xl font-normal text-accent">{time}</strong><span className="text-sm text-primary-foreground/80">{label}</span></div>;
+  return <div className="grid grid-cols-[5rem_minmax(0,1fr)] items-center gap-4 py-5"><strong className="text-2xl font-normal text-accent">{time}</strong><span className="text-sm text-primary-foreground/80">{label}</span></div>;
 }

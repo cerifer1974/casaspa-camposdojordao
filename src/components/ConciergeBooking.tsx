@@ -112,7 +112,7 @@ export function ConciergeBooking({ className, variant = "full" }: ConciergeBooki
   return (
     <div
       className={cn(
-        "relative rounded-sm border border-border/60 bg-card/95 text-card-foreground p-6 backdrop-blur-md transition-all shadow-2xl sm:p-8 lg:p-10",
+        "relative rounded-sm border border-border/60 bg-card/95 p-6 font-sans text-card-foreground shadow-2xl backdrop-blur-md transition-all sm:p-8 lg:p-10",
         className
       )}
     >
@@ -122,7 +122,7 @@ export function ConciergeBooking({ className, variant = "full" }: ConciergeBooki
           <span className="text-[0.65rem] font-medium uppercase tracking-[0.26em] text-accent-strong">
             Atendimento Privativo
           </span>
-          <h3 className="mt-1 font-display text-2xl text-foreground sm:text-3xl">
+          <h3 className="mt-1 text-2xl text-foreground sm:text-3xl">
             Concierge de Reservas Diretas
           </h3>
         </div>
@@ -229,7 +229,7 @@ export function ConciergeBooking({ className, variant = "full" }: ConciergeBooki
           </label>
           <div className="flex h-12 items-center justify-between rounded-none border border-border/60 bg-background px-4 text-sm text-muted-foreground">
             <span>Acomodação inteira</span>
-            <span className="font-display text-sm text-foreground">2 Adultos (18+)</span>
+            <span className="text-sm text-foreground">2 Adultos (18+)</span>
           </div>
           <p className="text-[0.68rem] text-muted-foreground">
             Ambiente 100% privativo · Não aceita pets.
