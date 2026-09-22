@@ -116,6 +116,46 @@ export function ConciergeBooking({ className, variant = "full" }: ConciergeBooki
         className
       )}
     >
+      {/* Versão Compacta — Mobile */}
+      <div className="md:hidden">
+        <span className="text-[0.65rem] font-medium uppercase tracking-[0.26em] text-accent-strong">
+          Atendimento Privativo
+        </span>
+        <h3 className="mt-1 text-2xl text-foreground">
+          Concierge de Reservas Diretas
+        </h3>
+        <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+          Datas, ocasião e experiências especiais — resolvemos tudo pelo
+          WhatsApp, com atendimento privativo e sem compromisso.
+        </p>
+        <div className="mt-6 flex flex-col gap-3">
+          <Button
+            variant="luxury"
+            size="luxury"
+            onClick={() =>
+              window.open(createWhatsAppUrl(), "_blank", "noopener,noreferrer")
+            }
+            className="w-full"
+          >
+            <MessageCircle className="h-4 w-4" />
+            <span>Consultar Datas</span>
+          </Button>
+          <Button
+            variant="luxuryOutline"
+            size="luxury"
+            asChild
+            className="w-full border-border text-foreground hover:bg-muted"
+          >
+            <a href={AIRBNB_URL} target="_blank" rel="noreferrer">
+              <span>Ver no Airbnb</span>
+              <ChevronRight className="h-3 w-3 opacity-60" />
+            </a>
+          </Button>
+        </div>
+      </div>
+
+      {/* Versão Completa — Desktop */}
+      <div className="hidden md:block">
       {/* Header do Concierge */}
       <div className="flex flex-col gap-2 border-b border-border/50 pb-6 sm:flex-row sm:items-center sm:justify-between">
         <div>

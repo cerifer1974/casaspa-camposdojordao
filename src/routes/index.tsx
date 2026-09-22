@@ -286,10 +286,7 @@ function Index() {
 
       <section className="section-space bg-secondary" aria-label="Avaliações de hóspedes">
         <div className="mx-auto max-w-5xl px-5 text-center sm:px-8" data-reveal>
-          <div className="mx-auto flex w-fit items-center gap-2 text-accent-strong">
-            {[0, 1, 2, 3, 4].map((star) => <Star key={star} className="h-4 w-4 fill-current" />)}
-          </div>
-          <p className="mt-4 text-xs uppercase tracking-[0.22em] text-muted-foreground">4,98 de 5 · 125 avaliações no Airbnb</p>
+          <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">4,98 de 5 · 125 avaliações no Airbnb</p>
           <Quote className="mx-auto mt-12 h-10 w-10 text-accent-strong/55" strokeWidth={1} />
           <div ref={testimonialRef} tabIndex={-1} className="mt-8 min-h-[170px] outline-none" aria-live="polite">
             <blockquote className="font-reading text-2xl leading-relaxed sm:text-4xl">“{testimonials[testimonial].quote}”</blockquote>
