@@ -206,8 +206,8 @@ function Index() {
             <h2 className="section-title">Não é hotel.<br />É um lugar inteiro para vocês.</h2>
             <div className="mt-8 max-w-xl space-y-5 font-reading text-base leading-8 text-muted-foreground">
               <p>Uma única casa, aberta para a floresta por vidraças do chão ao teto. Não há corredores, recepção ou outros hóspedes. Só o som da mata e o tempo de vocês.</p>
-              <p>Pela manhã, a névoa atravessa o vale. À noite, a lareira crepita enquanto o vapor da sauna encontra o ar frio da serra.</p>
-              <p>A experiência é self-service premium: cozinha completa, Nespresso e liberdade para criar o próprio ritmo — sem pensão ou café da manhã incluso.</p>
+              <p>Pela manhã, a névoa atravessa o vale enquanto o café quente fica pronto. À noite, a lareira crepita e o vapor da sauna encontra o ar frio da serra — uma ritualidade que se monta sozinho.</p>
+              <p>Self-service premium, sem compromissos de horário: cozinha completa, Nespresso, insumos de café da manhã e liberdade para criar o próprio ritmo. Não é hotel. É uma casa inteira para um casal que escolhe o silêncio.</p>
             </div>
             <div className="mt-10 flex items-center gap-4 border-t border-border pt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
               <BedDouble className="text-accent-strong" />
