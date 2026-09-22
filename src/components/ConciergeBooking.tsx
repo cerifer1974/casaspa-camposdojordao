@@ -14,6 +14,7 @@ import {
   Wine,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { createWhatsAppUrl } from "@/lib/contact";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import {
@@ -30,9 +31,7 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 
-// WhatsApp oficial ou placeholder configurável
-const WHATSAPP_NUMBER = "5512999999999"; // Substituir pelo número oficial
-const AIRBNB_URL = "https://www.airbnb.com.br/";
+const AIRBNB_URL = "https://www.airbnb.com.br/rooms/1200082710154180175?viralityEntryPoint=1&unique_share_id=AB039912-DA27-4263-9BA0-0DF3329B51FD&slcid=cc5bcae75c7a429f9a8ed546ce62d013&s=76&adults=2&slug=B3rS1cDg&source_impression_id=p3_1790001515_P39FxlTwX9Rkfo82&check_in=2026-10-16&guests=2&check_out=2026-10-18";
 
 const OCCASIONS = [
   { value: "escapada", label: "Escapada Romântica a Dois" },
@@ -107,9 +106,7 @@ export function ConciergeBooking({ className, variant = "full" }: ConciergeBooki
 
     message += "\nVi o refúgio pelo site oficial e gostaria de consultar as condições para reserva direta.";
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    window.open(createWhatsAppUrl(message), "_blank", "noopener,noreferrer");
   };
 
   return (

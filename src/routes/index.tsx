@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ConciergeBooking } from "@/components/ConciergeBooking";
+import { CONTACT, createWhatsAppUrl } from "@/lib/contact";
 const heroAsset = { url: "/images/SaveClip.App_785265639_18609305545022245_7413330073285849987_n.jpg" };
 const bedroomAsset = { url: "/images/SaveClip.App_766764969_18601739062022245_6884120617230699439_n.jpg" };
 const spaNightAsset = { url: "/images/SaveClip.App_768348017_18601738975022245_5622541170481989607_n.jpg" };
@@ -54,7 +55,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP_URL = "https://wa.me/5512999999999";
 const AIRBNB_URL = "https://www.airbnb.com.br/";
 
 const features = [
@@ -148,7 +148,7 @@ function Index() {
               <a className="nav-link" href="#localizacao">Localização</a>
             </nav>
             <Button variant="luxury" size="luxury" asChild className="h-10 px-4 sm:h-11 sm:px-5">
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+              <a href={createWhatsAppUrl()} target="_blank" rel="noreferrer">
                 <MessageCircle aria-hidden="true" />
                 <span className="hidden sm:inline">WhatsApp</span>
               </a>
@@ -222,7 +222,7 @@ function Index() {
             <Eyebrow>Dentro da experiência</Eyebrow>
             <h2 className="section-title max-w-3xl">O essencial, elevado ao extraordinário.</h2>
           </div>
-          <div className="mt-16 grid border-l border-t border-border sm:grid-cols-2 lg:grid-cols-3" data-reveal>
+          <div className="mt-16 grid grid-cols-1 border-l border-t border-border md:grid-cols-2 lg:grid-cols-3" data-reveal>
             {features.map(({ icon: Icon, title, text }, index) => (
               <article key={title} className="feature-cell">
                 <div className="flex items-start justify-between gap-5">
@@ -340,7 +340,7 @@ function Index() {
           </span>
         </div>
         <Button variant="luxury" size="sm" asChild className="h-10 px-4 text-xs">
-          <a href="#reserva">
+          <a href={createWhatsAppUrl()} target="_blank" rel="noreferrer">
             <Calendar className="h-3.5 w-3.5" />
             <span>Consultar Datas</span>
           </a>
@@ -355,7 +355,10 @@ function Index() {
           </div>
           <div className="grid gap-4 text-sm md:text-right">
             <a className="footer-link" href="https://instagram.com/casaspacamposdojordao" target="_blank" rel="noreferrer">@casaspacamposdojordao</a>
-            <span className="text-footer-foreground/45">WhatsApp e e-mail: adicionar contatos oficiais</span>
+            <a className="footer-link" href={createWhatsAppUrl()} target="_blank" rel="noreferrer">WhatsApp</a>
+            {CONTACT.email && (
+              <a className="footer-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+            )}
           </div>
         </div>
         <div className="mx-auto mt-12 flex max-w-[1440px] flex-col gap-3 border-t border-footer-foreground/15 px-5 pt-7 text-[0.68rem] uppercase tracking-[0.15em] text-footer-foreground/45 sm:px-8 md:flex-row md:justify-between lg:px-12">
