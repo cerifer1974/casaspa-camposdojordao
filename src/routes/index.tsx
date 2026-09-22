@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ConciergeBooking } from "@/components/ConciergeBooking";
+import { VideoBreak } from "@/components/VideoBreak";
 import { CONTACT, createWhatsAppUrl } from "@/lib/contact";
 const heroAsset = { url: "/images/SaveClip.App_785265639_18609305545022245_7413330073285849987_n.jpg" };
 const bedroomAsset = { url: "/images/SaveClip.App_766764969_18601739062022245_6884120617230699439_n.jpg" };
@@ -215,6 +216,9 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Seção de vídeo — após experiência, antes de destaques */}
+      <VideoBreak />
 
       <section className="bg-secondary py-24 sm:py-32">
         <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
