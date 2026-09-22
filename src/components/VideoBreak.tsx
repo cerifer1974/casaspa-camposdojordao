@@ -37,7 +37,7 @@ export function VideoBreak() {
   return (
     <section
       ref={containerRef}
-      className="relative isolate overflow-hidden bg-primary"
+      className="relative isolate overflow-hidden bg-primary md:max-w-[720px] md:mx-auto md:rounded-sm md:my-8 lg:max-w-[900px]"
       style={{ height: "clamp(65vh, 85vh, 90vh)" }}
     >
       {/* Poster / fallback */}
@@ -61,7 +61,7 @@ export function VideoBreak() {
         <video
           ref={videoRef}
           className={cn(
-            "absolute inset-0 z-10 h-full w-full object-cover transition-opacity duration-700",
+            "absolute inset-0 z-10 h-full w-full object-cover transition-opacity duration-700 md:object-[center_30%]",
             loaded && !error ? "opacity-100" : "opacity-0"
           )}
           muted
