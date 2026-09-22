@@ -289,10 +289,11 @@ function Index() {
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">4,98 de 5 · 125 avaliações no Airbnb</p>
           <Quote className="mx-auto mt-12 h-10 w-10 text-accent-strong/55" strokeWidth={1} />
           <div ref={testimonialRef} tabIndex={-1} className="mt-8 min-h-[170px] outline-none" aria-live="polite">
-            <blockquote className="font-reading text-2xl leading-relaxed sm:text-4xl">“{testimonials[testimonial].quote}”</blockquote>
+            <blockquote className="font-reading text-2xl leading-relaxed sm:text-4xl">“{testimonials[testimonial]?.quote}”</blockquote>
             <div className="mt-6">
-              <span className="block font-medium text-sm text-foreground">{testimonials[testimonial].author}</span>
-              <span className="text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">{testimonials[testimonial].context}</span>
+              <span className="block font-medium text-sm text-foreground">{testimonials[testimonial]?.author}</span>
+              <span className="text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground">{testimonials[testimonial]?.context}</span>
+
             </div>
           </div>
           <div className="mt-8 flex items-center justify-center gap-4">
